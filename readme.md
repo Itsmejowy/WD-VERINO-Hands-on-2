@@ -60,17 +60,17 @@
 Description of the project in details.
 
 Guiding Question:
-- What is the project -
-- Whats the purpose -
-- What are key components -
-- What technology used and how it is used -
+- What is the project - This project is a website showcasing distinct designs of heroes and cards using HTML and CSS, including both static and animated versions.
+- Whats the purpose -The purpose is to demonstrate creativity in web design by presenting 5 unique hero styles and 5 static card designs, along with 5 animated card designs, all deployed on a structured and accessible website.
+- What are key components - Key components include a landing page with a clear title, subtitle, and description, navigation buttons linking to hero and card galleries, and a variety of designed hero and card elements organized in respective folders.
+- What technology used and how it is used - The project exclusively utilizes pure HTML for structure, CSS for styling including animations
 
 ### Key Components
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+- Design and Theme
+- Implementation of Heroes and Cards
+- Organization and Navigation
 
 ### Technology
 <!-- TODO: List of Technology Used -->
