@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --color-accent: #ffa500;
+  --color-primary: #1e1e1e;
+  --color-secondary: #ffffff;
+  --color-bg: #000000;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./assets/css/img/yasuo_bg.jpg') center/cover no-repeat;
+}
+
+.header {
+  width: calc(100% - 2rem);
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header .btn {
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  text-decoration: none;
+  color: var(--color-secondary);
+  transition: background-color 0.3s ease;
+  background: var(--color-accent);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header .btn.active {
+  background-color: var(--color-accent);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header .btn:hover {
+  background-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.mascot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid var(--color-accent);
+}
+
+.contents {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 2rem;
+  color: var(--color-secondary);
+}
+
+.top .logo {
+  width: 100px;
+  height: auto;
+}
+
+.middle {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.note {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background-color: var(--color-primary);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 300px;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.others {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.email {
+  text-align: left;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: auto;
+}
+
+.creators {
+  text-align: center;
+}
+
+.creators p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.creators h6 {
+  font-size: 1rem;
+  margin: 0.3rem 0 0;
+}
+
+@media (max-width: 768px) {
+  .header .btn {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .mascot {
+    width: 200px;
+  }
+}
