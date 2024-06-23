@@ -2,38 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Styles Gallery</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <title>Kagura Hero and Card</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <nav>
-            <a href="../../index.html" class="nav-link">Home</a>
-        </nav>
-        <section class="hero hero1">
-            <h1>Hero Style 1</h1>
-            <p>Elegant and minimalistic hero design with a full-width background image.</p>
-        </section>
-        <section class="hero hero2">
-            <h1>Hero Style 2</h1>
-            <p>Bold and vibrant hero design with gradient background and centered text.</p>
-        </section>
-        <section class="hero hero3">
-            <h1>Hero Style 3</h1>
-            <p>Modern hero design with an overlay and a call-to-action button.</p>
-            <a href="#" class="cta-button">Learn More</a>
-        </section>
-        <section class="hero hero4">
-            <h1>Hero Style 4</h1>
-            <p>Creative hero design with a split background and contrasting text.</p>
-        </section>
-        <section class="hero hero5">
-            <h1>Hero Style 5</h1>
-            <p>Interactive hero design with an animated background and dynamic elements.</p>
-        </section>
+    <div class="hero-background">
+        <header class="header">
+            <a href="../../index.html" class="btn">Home</a>
+            <a href="../yasuo/index.html" class="btn">Yasuo</a>
+            <a class="btn active">Kagura</a>
+            <a href="../hero-3/index.html" class="btn">Hero 3</a>
+            <a href="../hero-4/index.html" class="btn">Hero 4</a>
+            <a href="../hero-5/index.html" class="btn">Hero 5</a>
+            <a href="../card-gallery/index.html" class="btn">Card Gallery</a>
+        </header>
+        <img src="../../assets/img/kaguraICON.jpg" alt="Kagura" class="mascot">
+        <div class="contents">
+            <div class="top">
+                <img src="" alt="Logo" class="logo">
+            </div>
+            <div class="middle">
+                <h4 class="note">Kagura - The Onmyoji Master</h4>
+                <div class="card">
+                    <img class="card-img" src="../../assets/img/kaguraICON.jpg" alt="Kagura Card">
+                    <h1 class="title">KAGURA<br><span>The Onmyoji Master</span></h1>
+                    <p class="description">"I am the light that protects the peace of the world."</p>
+                    <i class="bi bi-three-dots"></i>
+                </div>
+            </div>
+            <div class="info">
+                <h2>About Kagura</h2>
+                <p>Kagura is a powerful mage from the Land of the Rising Sun. She wields the Seimei Umbrella, which was passed down from her ancestors. With her exceptional skills in onmyodo, she can control the balance between yin and yang, protecting her allies and defeating her enemies.</p>
+                <h2>Skills</h2>
+                <ul>
+                    <li><strong>Seimei Umbrella Open:</strong> Kagura throws her Seimei Umbrella to a target location, dealing magic damage to enemies hit.</li>
+                    <li><strong>Rasho Umbrella Flee:</strong> Kagura leaves her umbrella behind and gains a shield, increasing her movement speed.</li>
+                    <li><strong>Yin Yang Overturn:</strong> Kagura deals massive magic damage to enemies around her umbrella, pulling them towards it and stunning them.</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
