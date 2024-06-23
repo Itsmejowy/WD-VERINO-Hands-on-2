@@ -23,11 +23,13 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../../assets/img/yasBG.png') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../../assets/img/kaguraICON.jpg') center/cover no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 
 .header {
-  width: 100%;
+  width: calc(100% - 2rem);
   display: flex;
   justify-content: center;
   padding: 1rem;
@@ -69,10 +71,11 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
+  width: 250px;
   height: auto;
   border-radius: 50%;
   border: 5px solid var(--color-accent);
+  transition: all 0.3s ease;
 }
 
 .contents {
@@ -84,20 +87,23 @@ body {
   height: 100%;
   padding: 2rem;
   color: var(--color-secondary);
+  z-index: 1;
 }
 
 .top .logo {
   width: 100px;
   height: auto;
+  z-index: 2;
 }
 
 .middle {
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  z-index: 2;
 }
 
 .note {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 
@@ -108,6 +114,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   width: 350px; /* Increased width */
   text-align: center; /* Center content */
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .card-img {
@@ -118,24 +126,30 @@ body {
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.details {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.details h2 {
+  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-.others {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.email {
-  text-align: left;
+.details ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  font-size: 1.2rem;
 }
 
 .bottom {
@@ -143,20 +157,26 @@ body {
   justify-content: space-around;
   width: 100%;
   margin-top: auto;
+  z-index: 2;
 }
 
+.lore,
 .creators {
   text-align: center;
+  width: 45%;
 }
 
+.lore h3,
+.creators h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+}
+
+.lore p,
 .creators p {
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   margin: 0;
-}
-
-.creators h6 {
-  font-size: 1rem;
-  margin: 0.3rem 0 0;
 }
 
 @media (max-width: 768px) {
@@ -165,11 +185,29 @@ body {
     padding: 0.3rem 0.6rem;
   }
 
+  .mascot {
+    width: 180px;
+  }
+
   .card {
+    width: 90%;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .lore,
+  .creators {
     width: 100%;
   }
 
-  .mascot {
-    width: 200px;
+  .bottom {
+    flex-direction: column;
+    align-items: center;
   }
 }
