@@ -1,47 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
-:root {
-  --color-accent: #ffa500;
-  --color-primary: #1e1e1e;
-  --color-secondary: #ffffff;
-  --color-bg: #000000;
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-secondary);
+/* Variables */
+:root {
+  --color-primary: #1a1a1a;
+  --color-secondary: #f2f2f2;
+  --color-accent: #ff4d4d;
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--color-primary);
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.hero-background {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../../../assets/img/kaguraICON.jpg') center/cover no-repeat;
-  background-size: cover;
-  overflow: hidden;
-}
-
-.header {
-  width: calc(100% - 2rem);
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-  gap: 1rem;
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  position: fixed;
-  top: 0;
-  z-index: 10;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease;
 }
 
 .header .btn {
@@ -54,129 +31,130 @@ body {
   transition: background-color 0.3s ease;
   background: var(--color-accent);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 0.5rem;
 }
 
 .header .btn.active {
-  background-color: var(--color-accent);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #e60000;
 }
 
-.header .btn:hover {
-  background-color: var(--color-accent);
-  transform: translateY(-2px);
+/* Hero Card Styles */
+.hero-card {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../assets/img/viperBG.jpg');
+  background-size: cover;
+  background-position: center;
+  color: var(--color-secondary);
+  padding: 2rem;
 }
 
-.mascot {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: auto;
-  border-radius: 50%;
-  border: 5px solid var(--color-accent);
-  transition: all 0.3s ease;
-}
-
-.contents {
+.hero-card .viper-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-card .viper-image img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.hero-card .viper-image:hover img {
+  transform: scale(1.1);
+}
+
+.hero-card .viper-image .image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.7);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  height: 100%;
-  padding: 2rem;
-  color: var(--color-secondary);
-  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.top .logo {
-  width: 100px;
-  height: auto;
-  z-index: 2;
+.hero-card .viper-image:hover .image-overlay {
+  opacity: 1;
 }
 
-.middle {
-  text-align: center;
-  margin-top: 3rem;
-  z-index: 2;
+.hero-card .viper-image .image-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.note {
+.hero-card .viper-image .image-overlay p {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
 }
 
-.card {
-  background-color: var(--color-primary);
+.hero-card .viper-info {
+  flex: 1;
+  background-color: rgba(26, 26, 26, 0.8);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 8px;
+  text-align: left;
+  margin-left: 2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  width: 350px; /* Increased width */
-  text-align: center; /* Center content */
-  z-index: 2;
-  transition: all 0.3s ease;
 }
 
-.card-img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.hero-card .viper-info h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1px;
-}
-
-.description {
+.hero-card .viper-info p {
   font-size: 1.2rem;
+  line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.details {
-  text-align: left;
-  margin-top: 2rem;
+.hero-card .viper-info .abilities {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
-.details h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.details ul {
-  list-style-type: disc;
-  padding-left: 2rem;
-  font-size: 1.2rem;
-}
-
-.bottom {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: auto;
-  z-index: 2;
-}
-
-.lore,
-.creators {
+.hero-card .viper-info .abilities .ability {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
   text-align: center;
-  width: 45%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.lore h3,
-.creators h3 {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-  letter-spacing: 1px;
+.hero-card .viper-info .abilities .ability:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.lore p,
-.creators p {
-  font-size: 1.2rem;
-  margin: 0;
+.hero-card .viper-info .abilities .ability i {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+}
+
+.hero-card .viper-info .abilities .ability h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-card .viper-info .abilities .ability p {
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 @media (max-width: 768px) {
@@ -185,29 +163,19 @@ body {
     padding: 0.3rem 0.6rem;
   }
 
-  .mascot {
-    width: 180px;
-  }
-
-  .card {
-    width: 90%;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .description {
-    font-size: 1rem;
-  }
-
-  .lore,
-  .creators {
-    width: 100%;
-  }
-
-  .bottom {
+  .hero-card {
     flex-direction: column;
-    align-items: center;
+  }
+
+  .hero-card .viper-image {
+    margin-bottom: 2rem;
+  }
+
+  .hero-card .viper-info {
+    margin-left: 0;
+  }
+
+  .hero-card .viper-info .abilities {
+    grid-template-columns: 1fr;
   }
 }
