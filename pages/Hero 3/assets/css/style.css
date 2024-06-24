@@ -1,0 +1,160 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Variables */
+  :root {
+    --color-primary: #1a1a1a;
+    --color-secondary: #f2f2f2;
+    --color-accent: #ff4d4d;
+    --color-nevermore: #8b0000;
+  }
+  
+  /* Header Styles */
+  .header {
+    background-color: var(--color-primary);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .header .btn {
+    font-size: 1rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: background-color 0.3s ease;
+    background: var(--color-accent);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 0.5rem;
+  }
+  
+  .header .btn.active {
+    background-color: var(--color-nevermore);
+  }
+  
+  /* Hero Background Styles */
+  .hero-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../assets/img/nevermorePIC.jpg') center/cover no-repeat;
+  }
+  
+  /* Hero Content Styles */
+  .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 2rem;
+  }
+  
+  .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nevermore-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: floatNevermore 5s ease-in-out infinite;
+  }
+  
+  .hero-info {
+    flex: 1;
+    text-align: left;
+    margin-left: 2rem;
+  }
+  
+  .hero-info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-info p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .abilities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .abilities .ability {
+    background-color: rgba(139, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .abilities .ability:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .abilities .ability i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-nevermore);
+  }
+  
+  .abilities .ability h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .abilities .ability p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+  @keyframes floatNevermore {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header .btn {
+      font-size: 0.9rem;
+      padding: 0.3rem 0.6rem;
+    }
+  
+    .hero-content {
+      flex-direction: column;
+    }
+  
+    .hero-image {
+      margin-bottom: 2rem;
+    }
+  
+    .hero-info {
+      margin-left: 0;
+    }
+  
+    .abilities {
+      grid-template-columns: 1fr;
+    }
+  }
+  
