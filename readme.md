@@ -70,7 +70,7 @@ Guiding Question:
 <!-- The following are just sample -->
 - Design and Theme
 - Implementation of Heroes and Cards
-- Organization and Navigation
+- Navigation
 
 ### Technology
 <!-- TODO: List of Technology Used -->
