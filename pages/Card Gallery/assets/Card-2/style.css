@@ -19,6 +19,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header .btn {
@@ -39,8 +45,8 @@
 }
 
 /* Hero Card Styles */
-.hero-cardviper {
-  height: 80vh;
+.hero-card {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,7 +57,7 @@
   padding: 2rem;
 }
 
-.hero-cardviper .viper-imageviper {
+.hero-card .viper-image {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -62,17 +68,17 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hero-cardviper .viper-imageviper img {
+.hero-card .viper-image img {
   max-width: 100%;
   height: auto;
   transition: transform 0.5s ease;
 }
 
-.hero-cardviper .viper-imageviper:hover img {
+.hero-card .viper-image:hover img {
   transform: scale(1.1);
 }
 
-.hero-cardviper .viper-imageviper .image-overlay {
+.hero-card .viper-image .image-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -87,21 +93,21 @@
   transition: opacity 0.5s ease;
 }
 
-.hero-cardviper .viper-imageviper:hover .image-overlay {
+.hero-card .viper-image:hover .image-overlay {
   opacity: 1;
 }
 
-.hero-cardviper .viper-imageviper .image-overlay h1 {
+.hero-card .viper-image .image-overlay h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-cardviper .viper-imageviper .image-overlay p {
+.hero-card .viper-image .image-overlay p {
   font-size: 1.5rem;
 }
 
-.hero-cardviper .viper-info {
+.hero-card .viper-info {
   flex: 1;
   background-color: rgba(26, 26, 26, 0.8);
   padding: 2rem;
@@ -111,24 +117,24 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.hero-cardviper .viper-info h2 {
+.hero-card .viper-info h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.hero-cardviper .viper-info p {
+.hero-card .viper-info p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
-.hero-cardviper .viper-info .abilities {
+.hero-card .viper-info .abilities {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
 
-.hero-cardviper .viper-info .abilities .ability {
+.hero-card .viper-info .abilities .ability {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
   border-radius: 8px;
@@ -136,23 +142,23 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.hero-cardviper .viper-info .abilities .ability:hover {
+.hero-card .viper-info .abilities .ability:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.hero-cardviper .viper-info .abilities .ability i {
+.hero-card .viper-info .abilities .ability i {
   font-size: 2rem;
   margin-bottom: 1rem;
   color: var(--color-accent);
 }
 
-.hero-cardviper .viper-info .abilities .ability h3 {
+.hero-card .viper-info .abilities .ability h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.hero-cardviper .viper-info .abilities .ability p {
+.hero-card .viper-info .abilities .ability p {
   font-size: 1rem;
   line-height: 1.4;
 }
@@ -163,19 +169,21 @@
     padding: 0.3rem 0.6rem;
   }
 
-  .hero-cardviper {
+  .hero-card {
     flex-direction: column;
+    height: auto;
+    padding-top: 6rem;
   }
 
-  .hero-cardviper .viper-imageviper {
+  .hero-card .viper-image {
     margin-bottom: 2rem;
   }
 
-  .hero-cardviper .viper-info {
+  .hero-card .viper-info {
     margin-left: 0;
   }
 
-  .hero-cardviper .viper-info .abilities {
+  .hero-card .viper-info .abilities {
     grid-template-columns: 1fr;
   }
 }
