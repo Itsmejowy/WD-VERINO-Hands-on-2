@@ -1,11 +1,11 @@
-/* CSS Reset */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  /* Variables */
+ 
   :root {
     --color-primary: #1a1a1a;
     --color-secondary: #f2f2f2;
@@ -13,7 +13,7 @@
     --color-nevermore: #8b0000;
   }
   
-  /* Header Styles */
+
   .header {
     background-color: var(--color-primary);
     padding: 1rem;
@@ -39,7 +39,7 @@
     background-color: var(--color-nevermore);
   }
   
-  /* Hero Background Styles */
+  
   .hero-background {
     position: relative;
     width: 100%;
@@ -47,7 +47,7 @@
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../../assets/img/nevermorePIC.jpg') center/cover no-repeat;
   }
   
-  /* Hero Content Styles */
+  
   .hero-content {
     display: flex;
     justify-content: center;
